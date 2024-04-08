@@ -2,121 +2,122 @@
 
 <html>
 	<head>
-		<title>Sai Sowjanya's Portfolio</title>
+		<title>Sai Sowjanya Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="icon" type="image/jpg" href="images/fulls/icon.jpg">
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+		
 	</head>
-	<body class="is-preload">
+	<body class="is-preload">		
 		<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-		<script>
-			function downloadPDF() {
-			// Path to the PDF file within your project
-			const pdfPath = './Documents/Sai Sowjanya_Resume .pdf';
-			
-			// Create an anchor element
-			const a = document.createElement('a');
-
-			// Set the href attribute with the path to the PDF file
-			a.href = pdfPath;
-			a.target = '_blank';
-
-			// Set the download attribute with the desired file name
-			a.download = 'Sai Sowjanya_Resume .pdf';
-
-			// Append the anchor to the document and trigger a click event
-			document.body.appendChild(a);
-			a.click();
-
-			// Remove the anchor from the document
-			document.body.removeChild(a);
-			}
-
-			function sendEmail(){			
-
-				emailjs.init("OmWOt-qyi0oNadP2_");
-
-				const name = document.getElementById('name').value;
-      			const email = document.getElementById('email').value;
-      			const message = document.getElementById('message').value;
-
-				  const templateParams = {
-					from_name: name,
-					to_email: email,
-					message: message,
-				};
-
-				if (!name || !email || !message) {
-					alert('Please fill in all fields before sending message.');
-					return;
-				}
-
-				emailjs.send("service_q1riy1o", "template_0j6bwch", templateParams)
-					.then(response => {
-					console.log('Email sent:', response);
-					alert('Email sent successfully!');
-					})
-					.catch(error => {
-					console.error('Error sending email:', error);
-					alert('Error sending email. Please try again.');
-					});
-				}
-		</script>
-
+		
 		<!-- Header -->
-			<header id="header">
-				<div class="inner">					
-					<a href="#" class="image avatar"><img src="images/fulls/profile.jpg" alt="" /></a>
-					<h1>
-						<strong style="color:white">I am Padamati Sai Sowjanya</strong>				
-					</h1>
-					<h1><strong style="color:white">Full Stack Developer</strong></h1><br />
-					</div>
-			</header>
+		<header id="header" class = "background-image">
+			<div class="inner">                    
+				<a class="image avatar" id="avatar-link"><img src="images/fulls/P1.jpg" alt="" /></a>
+				<h1 class="drop-animation">
+					<strong style="color:white;font-weight: 1000"><span style="color:rgba(159, 5, 5);font-weight: 1000">PADAMATI</span> SAI SOWJANYA</strong>              
+				</h1>
+				<h1 class="roll-animation"><strong style="color:white">Full Stack Developer</strong></h1><br />
+			</div>
+		</header>
+			<div class="overlay" id="overlay">
+				<!-- Enlarged image -->
+				<div class="enlarged-image" id="enlarged-image">
+					<img src="images/fulls/P1.jpg" alt="Enlarged Image">
+				</div>
+			</div>
 
 		<!-- Main -->
 		
-			<div id="main">
-				
+				<div id="main">				
 				<!-- One -->
-					<section id="one">
-						
+					<section id="one">						
 						<header class="major">
-							<h2>Education</h2>
+							<h2>EDUCATION</h2>
 						</header>
-							<h2><b><strong>Florida State University</strong></b></h2>
-							<ul>
-								<h4>Computer and Information Sciences 
-								<li> May 2024</li>  
-								<i>GPA: 3.79/4.0</i>
-							</ul>	
-							<h2><b><strong>Jawaharlal Nehru Technological University, Kakinada</strong></b></h2>
-							<ul>
-								<h4>Computer Science and Engineering 
-								<li> May 2019</li>  
-								<i>GPA: 3.7/4.0</i>
-							</ul>				
-							<a class="button" onclick="downloadPDF()">Resume</a>						
-							
-					</section>
-
-					<section id ="four">						
-						<h1>Experience</h1>
-						<h3>Wipro Limited</h3>
-						<ul>
-							<h4>Project Engineer
-							<li>June 2019 - July 2022</li>
+						<div>
+							<h4>
+								<b>
+									<strong>
+										<span style="color:goldenrod">FLORIDA STATE</span>
+										<span style="color:rgb(179, 6, 6)">UNIVERSITY</span>  
+										<span style="float: right;">August 2022 - May 2024</span>
+									</strong>
+									<i class="fas fa-file-alt">
+										MASTERS OF SCIENCE</i>						
+								</b>
+							</h4>							
+						</div>																			
+						<ul>							
+							<h4>Computer and Information Science  
+							<i>GPA: 3.75/4.0</i></h4>
 						</ul>
-						<p>Worked as a .NET Full Stack Developer, responsible for designing, developing, and maintaining web applications and software solutions using Microsoft's .NET framework.</p>
-	
-					</section>	
-
-
+						<div>	
+							<h4>
+								<b>
+									<strong>
+										<span style="color:green">JAWAHARLAL NEHRU TECHNOLOGICAL</span>						 
+										<span style="color:rgb(179, 6, 6)">UNIVERSITY</span>
+										<span style="float: right;">June 2015 - May 2019</span>
+									</strong>
+									<i class="fas fa-graduation-cap" style="margin-right: 1em;">
+										BACHELORS OF TECHNOLOGY
+									</i>										
+								</b>
+							</h4>
+						</div>
+						<ul>
+							<h4>Computer Science and Engineering
+							<i>GPA: 3.7/4.0</i></h4>
+						</ul>				
+						<a class="button" onclick="downloadPDF()">Resume</a>											
+					</section>
+						
+						<section id="four">
+							<div>
+								<header class="major">
+									<h2>EXPERIENCE</h2>
+								</header>
+								
+								<div style="display: flex; align-items: center;">
+								<img src="./images/fulls/fsu.webp" style="width: 30px; height: 30px; margin-right: 10px;">
+									<strong>FLORIDA STATE UNIVERSITY</strong>
+								</img>	
+							</div>							
+								<i class="fas fa-laptop-code" style="margin-right: 1em;">
+									APPLICATION DEVELOPER
+								</i>
+								<span style="float: right;">Jan 2019 - Present</span>																																				
+								<ul>
+									<li>Design and implement critical applications in a .Net environment</li>
+									<li>Develop internal and client-facing web applications, web pages, and productivity tools utilizing Microsoft SQL Server, C#, Bootstrap, and ASP .NET Core</li>
+									<li>Utilized HTML, JavaScript, and AngularJS to craft a user interface that enhanced user interactions within the application</li>
+								</ul>
+								<div style="display: flex; align-items: center;">
+									<img src="./images/fulls/wipro logo.png" style="width: 40px; height: 30px; margin-right: 10px;">
+										WIPRO LIMITED
+										</div>
+									<i class="fas fa-layer-group" style="margin-right: 1em;">
+										FULL STACK DEVELOPER
+									</i>
+								<span style="float: right;">June 2019 - July 2022</span>								
+								<ul>
+									<li>Responsible for designing, developing, and maintaining web applications and software solutions using Microsoft's .NET framework</li>
+									<li>Experience in designing database schemas by applying normalization forms, writing Stored Procedure, Functions and Triggers, LINQ to SQL queries to perform CRUD on databases like MS SQL Server</li>
+									<li>Implementing different caching techniques to increase data optimization, caching, and performance</li>
+									<li>Proficient in employing Microservice architecture, developing RESTful and SOAP Web Services, utilizing Windows Communication Foundation (WCF), Web API for delivering JSON and XML formatted data, and integrating RabbitMQ as a message broker for seamless data exchange between components via queuing</li>
+								</ul>
+							</div>
+						</section>			
+						
 				<!-- Two -->
-				<section id ="two">						  
-
-						<h2>Recent Work</h2>
+				<section id ="two">					  
+					<header class="major">
+						<h2>PROJECTS</h2>
+					</header>						
 						<div class="row">
 							<article class="col-6 col-12-xsmall">
 								<a href="https://github.com/psaisowjanya1212/weather-website" target="_blank" class="image fit thumb">
@@ -128,7 +129,7 @@
 							<article class="col-6 col-12-xsmall">
 								<a href="https://github.com/psaisowjanya1212/Network-Statistics-Monitoring-Tool-using-Python" target="_blank" class="image fit thumb">
 									<img src="images/thumbs/network_diagram.png" style="height: 200px; width: 100%;" alt="" />
-									<h4>Network Statistics Monitoring Tool using Python</h4>
+									<h4>Network Statistics Monitoring Tool</h4>
 								</a>
 								<p></p>
 							</article>
@@ -141,66 +142,104 @@
 							</article>							
 						</div>						
 					</section>
-					
-					<section>
-						<h1>Skills</h1>
-						<div class="row">							
-							<div class="col-6 col-12-xsmall"" data-skill="C#" data-percentage="100" >
-								<div class="label">.NET </div>
-								<div class="filled">								
-									<progress id="file1" value="80" max="100"></progress>
-								</div>							
-							</div>
-							<div class="col-6 col-12-xsmall"" data-skill="JavaScript/jQuery" data-percentage="100">
-								<div class="label">JavaScript/jQuery</div>
-								<div class="filled">
-									<progress id="file2" value="70" max="100"></progress>
-								</div>							
-							</div>
-							<div class="col-6 col-12-xsmall" data-skill="HTML/CSS" data-percentage="100">
-								<div class="label">HTML/CSS</div>
-								<div class="filled" >								
-									<progress id="file3" value="75" max="100"></progress>
-								</div>						
-							</div>
-							<div class="col-6 col-12-xsmall" data-skill="Python" data-percentage="100">
-								<div class="label">MSSQL/MySQL</div>
-								<div class="filled">								
-									<progress id="file4" value="85" max="100"></progress>
-								</div>
-							</div>
-							<div class="col-6 col-12-xsmall" data-skill="Git" data-percentage="100">
-								<div class="label">Github/BitBucket</div>
-								<div class="filled">									
-									<progress id="file5" value="85" max="100"></progress>								
-								</div>
-							</div>	
-							<div class="col-6 col-12-xsmall" data-skill="Git" data-percentage="100">
-								<div class="label">Python</div>
-								<div class="filled">									
-									<progress id="file5" value="80" max="100"></progress>								
-								</div>
-							</div>
-						</div>					
-						<div class="chart" id="skillChart"></div>
-						<div id="skillInfo"></div>						
-				  </section>
 
+					<section id="skills">
+						<header class="major">
+							<h2>SKILLS</h2>
+						</header>
+						  				  
+						  <div><h4>LANGUAGES, FRAMEWORKS & TOOLS</h4>
+						  <div>
+							<ul class="list-inline dev-icons">
+							<li class="list-inline-item" >
+								<div class="icon-wrapper">
+									<i class="devicon-c-line-wordmark"></i>
+								</div>							  
+							</li>
+							<li class="list-inline-item">
+								<div class="icon-wrapper">
+									<i class="devicon-cplusplus-line-wordmark"></i>
+								</div>							  
+							</li>
+							<li class="list-inline-item">
+								<div class="icon-wrapper">
+									<i class="devicon-csharp-line-wordmark"></i>
+								</div>
+							  </li>
+							<li class="list-inline-item" >
+							  <i class="fab fa-java"></i>
+							</li>
+							<li class="list-inline-item">
+								<div class="icon-wrapper">
+									<i class="devicon-javascript-plain"></i>
+								</div>							  
+							</li>
+							<li class="list-inline-item">
+							  <i class="fab fa-python"></i>
+							</li>
+							<li class="list-inline-item">
+							  <i class="fab fa-html5"></i>
+							</li>
+							<li class="list-inline-item">
+							  <i class="fab fa-css3-alt"></i>
+							</li>
+							<li class="list-inline-item">
+								<div class="icon-wrapper">
+									<i class="devicon-bootstrap-plain-wordmark"></i>
+								</div>							  
+							</li>
+							<li class="list-inline-item">
+								<div class="icon-wrapper">
+									<i class="fab fa-angular"></i>
+								</div>							  
+							</li>
+							<li class="list-inline-item">
+								<div class="icon-wrapper">
+									<i class="fab fa-react"></i>
+								</div>							  
+							</li>
+							<li class="list-inline-item">
+								<div class="icon-wrapper">
+									<i class="devicon-django-line-wordmark"></i>
+								</div>							  
+							</li>
+							<li class="list-inline-item">
+							  <i class="fab fa-git-alt"></i>
+							</li>
+							<li class="list-inline-item">
+								<div class="icon-wrapper">
+									<i class="devicon-bitbucket-plain-wordmark"></i>
+								</div>								
+							</li>
+						  </ul>
+						  <h4>WORKFLOW</h4>
+						  <ul class ="workflow">
+							<li class="fas fa-check">System design and Data design</li>
+							<li class="fas fa-check">Testing & Debugging</li>
+							<li class="fas fa-check">Cross Functional Teams</li>
+							<li class="fas fa-check">Agile Development & Scrum</li>
+						  </ul>
+						</div>
+						  </div>
+						
+					</section>
+					
 				<!-- Three -->
 					<section id="three">
-						<h2>Get In Touch</h2>						
+						<header class="major">
+							<h2>GET IN TOUCH</h2>
+						</header>
+												
 						<div class="row">
 							<div class="col-8 col-12-small">
 								<form method="post" action="#">
 									<div class="row gtr-uniform gtr-50">
 										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
 										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+										<div class="col-12"><textarea class="animated-text" name="message" id="message" placeholder="Message" rows="4"></textarea></div>
 									</div>
 								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" onclick="sendEmail()" /></li>
-								</ul>
+								<a class="button" onclick="sendEmail()">Send Message</a>								
 							</div>
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">
@@ -221,22 +260,21 @@
 								</ul>
 							</div>
 						</div>
-					</section>				
+					</section>
+				
+
 			</div>
 
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="inner">
-					<ul class="icons">						
-						<strong>
+					<ul class="icons animate-icons">						
+						<!-- <strong class=""> -->
 							<li><a href="https://github.com/psaisowjanya1212/" target="_blank" class="icon brands github fa-github"><span class="label">Github</span></a></li>
 							<li><a href="https://www.linkedin.com/in/padamati-sai-sowjanya-94b719135/" target="_blank" class="icon brands linkedin fa-linkedin"><span class="label">LinkedIn</span></a></li>
 							<li><a href="mailto:psaisowjanya1212@gmail.com" target="_blank" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</strong>
-					</ul>
-					<ul class="copyright">
-						<li> Design with <span style="color: red;">&hearts;</span>  by Sai Sowjanya </li>
-					</ul>
+						<!-- </strong> -->
+					</ul>					
 				</div>
 			</footer>
 
@@ -247,6 +285,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/image_enlarge.js"></script>
+			<script src="assets/js/resume.js"></script>
 
 	</body>
 </html>
